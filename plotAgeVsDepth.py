@@ -165,10 +165,14 @@ ages.append(tiepoint16.age)
 # plt.scatter(ages, depths, c="cyan", marker="D")
 
 for i in range(0, len(types)):
-    if types[i] == 'pmag':
-        plt.scatter(ages[i], depths[i], c="cyan", marker="D")
-    elif types[i] == 'nanno':
-        plt.scatter(ages[i], depths[i], c="blue", marker="D")
+    if "pmag" in types[i]:
+        plt.scatter(ages[i], depths[i], c="black", marker="D")
+    elif "nanno" in types[i]:
+        plt.scatter(ages[i], depths[i], c="green", marker="D")
+#    elif "F" in types[i]:
+#        plt.scatter(ages[i], depths[i], c="orange", marker="D")
+#    elif "R" in types[i]:
+#        plt.scatter(ages[i], depths[i], c="blue", marker="D")
 
 plt.plot(ages, depths, c="blue")
 plt.gca().invert_yaxis()
